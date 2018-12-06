@@ -1,0 +1,37 @@
+﻿body{
+	background-color: #595959;
+}
+canvas{
+	display: block;
+	margin: auto;
+	margin-top: 40px;
+	border: 20px solid;
+	border-radius: 10px;
+	background-image: url(img/fondo.jpg);
+	background-size: cover;
+	/*background-color: #000066;*/
+}
+#reset{
+	display: none;
+	position: absolute;
+	top: 0;
+	margin-left: 595px;
+    margin-top: 390px;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+#reset img{
+	width: 160px;
+	height: auto;
+}
+#over{
+	display: none;
+	position: absolute;
+	top: 0;
+	margin-left: 335px;
+    margin-top: 30px;
+}
+#over img{
+	width: 700px;
+	height: auto;
+}
