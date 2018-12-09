@@ -3,22 +3,20 @@
 }
 canvas{
 	display: block;
+    position: relative;
 	margin: auto;
 	margin-top: 40px;
 	border: 20px solid;
 	border-radius: 10px;
 	background-image: url(img/fondo.jpg);
 	background-size: cover;
-	/*background-color: #000066;*/
 }
 #reset{
 	display: none;
 	position: absolute;
 	top: 0;
-	margin-left: 595px;
-    margin-top: 390px;
-    opacity: 0;
-    transition: opacity 3s ease-in-out;
+	margin-left: calc(50% - 80px);
+    margin-top: 350px;
 }
 #reset img{
 	width: 160px;
@@ -28,10 +26,28 @@ canvas{
 	display: none;
 	position: absolute;
 	top: 0;
-	margin-left: 335px;
-    margin-top: 30px;
+	margin-left: calc(50% - 355px);
+    margin-top: 30PX;
 }
 #over img{
 	width: 700px;
 	height: auto;
+}
+#save{
+    display: none;
+    position: absolute;
+    top: 0;
+    margin-left: calc(50% - -120px);
+    margin-top: 473px;
+    color: white;
+    background-color: black;
+    font-family: "Arial";
+    font-weight: bold;
+}
+#bestScore{
+	color: #c6ff1a;
+	font-weight: bold;
+	font-size: 20px;
+	font-family: "Arial";
+    margin-top: 50px;
 }
