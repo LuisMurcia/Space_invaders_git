@@ -1,5 +1,9 @@
 ﻿window.onload = function(){	
 	startGame();
+	setCookies();
+	document.getElementById("save").onclick = function(){
+			guardarCookies();
+	}
 	document.getElementById("reset").onclick = function(){
 		reseteo();
 		startGame();
@@ -278,6 +282,27 @@ function reseteo(){
 	cadenciaTiro = 0.02;
 	vidas = 3;
 	powerVidas = [];
+}
+//Cookies
+function setCookies(){
+	var array = document.cookie.split('; ');
+	var cookieName;
+	var cookieValue;
+	var temp;
+	for(var i = 0; i < array.length; i++){
+		temp = array[i].split('=');
+		cookieName = temp[0];
+		cookieValue = temp[1];
+		for(var i = 0; i < array.length; i++){
+			if(cookieName == "rank"){
+			document.getElementById("bestScore").innerHTML+="<span>"+"BEST SCORE: "+cookieValue+"</span>";
+			}
+		}
+	}
+}
+function guardarCookies(){
+	document.cookie = "rank= " + score;
+	alert("BEST SCORE guardada como: "+ score);
 }
 //Refresca constantemente el juego para que haya movimiento
 function actualizarScreen(){
